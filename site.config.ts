@@ -11,7 +11,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Solaris的博客',
-  domain: 'https://www.notion.so/zhangqiyan/Solaris-c13c1a49716647f98f089db05b7686c2',
+  domain: 'https://zhangqiyan.notion.site/solaris-s-bloooooog-05937a16c169417d97aaefc56565c055',
   author: 'Solaris',
 
   // open graph metadata (optional)
