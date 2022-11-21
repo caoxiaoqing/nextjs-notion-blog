@@ -84,16 +84,6 @@ export const NotionPageHeader: React.FC<{
         </div>
       </div>
       
-      <script>
-        var _hmt = _hmt || [];
-        (function() {
-         var hm = document.createElement("script");
-         hm.src = "https://hm.baidu.com/hm.js?57368c08255ba0547f359221232f1388";
-         var s = document.getElementsByTagName("script")[0]; 
-         s.parentNode.insertBefore(hm, s);
-        })();
-      </script>
-      
     </header>
   )
 }
