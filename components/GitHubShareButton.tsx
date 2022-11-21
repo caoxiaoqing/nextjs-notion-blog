@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 export const GitHubShareButton: React.FC = () => {
   return (
     <a
-      href='https://www.notion.so/zhangqiyan/WeChat-39739bc6674e400da16c5c0f24c10612'
+      href='https://zhangqiyuan.xyz/wechat'
       target='_blank'
       rel='noopener noreferrer'
       className={styles.githubCorner}
