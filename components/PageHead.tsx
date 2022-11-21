@@ -79,6 +79,17 @@ export const PageHead: React.FC<
       <meta property='og:title' content={title} />
       <meta name='twitter:title' content={title} />
       <title>{title}</title>
+      
+      <script>
+        var _hmt = _hmt || [];
+        (function() {
+         var hm = document.createElement("script");
+         hm.src = "https://hm.baidu.com/hm.js?57368c08255ba0547f359221232f1388";
+         var s = document.getElementsByTagName("script")[0]; 
+         s.parentNode.insertBefore(hm, s);
+        })();
+      </script>
+      
     </Head>
   )
 }
