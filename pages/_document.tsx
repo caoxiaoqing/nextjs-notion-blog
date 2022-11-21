@@ -18,6 +18,17 @@ export default class MyDocument extends Document {
             />
 
             <link rel='manifest' href='/manifest.json' />
+            
+            <script>
+              var _hmt = _hmt || [];
+               (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?57368c08255ba0547f359221232f1388";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+              })();
+            </script>
+            
           </Head>
 
           <body>
