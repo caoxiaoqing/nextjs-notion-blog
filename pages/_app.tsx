@@ -3,7 +3,6 @@ import * as React from 'react'
 import { Head } from 'next/document';
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import { Router } from 'next/router'
 
 import * as Fathom from 'fathom-client'
 // used for rendering equations (optional)
@@ -34,6 +33,7 @@ if (!isServer) {
   bootstrap()
 }
 
+// import { Router } from 'next/router'
 // Router.events.on('routeChangeComplete', (url) => {
 //   try{
 //     window._hmt.push(['_trackPageview', url])
