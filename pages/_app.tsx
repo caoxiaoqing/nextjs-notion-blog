@@ -77,9 +77,9 @@ export default function App({ Component, pageProps }: AppProps) {
   // return <Component {...pageProps} />
   return (
     <>
-      <Head>
+      <head>
         <script dangerouslySetInnerHTML={getAnalyticsTag()}/>
-      </Head>
+      </head>
       <Component {...pageProps} />
     </>
   )
