@@ -1,6 +1,6 @@
 // global styles shared across the entire site
 import * as React from 'react'
-import { Head } from 'next/document';
+// import { Head } from 'next/document';
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 
@@ -71,26 +71,27 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
   
-  const getAnalyticsTag = () => {
-    return {
-      __html:`
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?36372b4b678414cc6126106254be1d6f";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-      })();`,
-    }
-  }
+//   const getAnalyticsTag = () => {
+//     return {
+//       __html:`
+//       var _hmt = _hmt || [];
+//       (function() {
+//         var hm = document.createElement("script");
+//         hm.src = "https://hm.baidu.com/hm.js?36372b4b678414cc6126106254be1d6f";
+//         var s = document.getElementsByTagName("script")[0];
+//         s.parentNode.insertBefore(hm, s);
+//       })();`,
+//     }
+//   }
 
-  // return <Component {...pageProps} />
-  return (
-    <>
-      <Head>
-        <script dangerouslySetInnerHTML={getAnalyticsTag()}/>
-      </Head>
-      <Component {...pageProps} />
-    </>
-  )
+  return <Component {...pageProps} />
+  
+//   return (
+//     <>
+//       <Head>
+//         <script dangerouslySetInnerHTML={getAnalyticsTag()}/>
+//       </Head>
+//       <Component {...pageProps} />
+//     </>
+//   )
 }
