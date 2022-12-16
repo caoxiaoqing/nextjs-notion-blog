@@ -1,5 +1,6 @@
 // global styles shared across the entire site
 import * as React from 'react'
+import { Head } from 'next/document';
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { Router } from 'next/router'
@@ -33,13 +34,13 @@ if (!isServer) {
   bootstrap()
 }
 
-Router.events.on('routeChangeComplete', (url) => {
-  try{
-    window._hmt.push(['_trackPageview', url])
-  }catch(e){
-    // continue regardless of error
-  }
-})
+// Router.events.on('routeChangeComplete', (url) => {
+//   try{
+//     window._hmt.push(['_trackPageview', url])
+//   }catch(e){
+//     // continue regardless of error
+//   }
+// })
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -86,9 +87,9 @@ export default function App({ Component, pageProps }: AppProps) {
   // return <Component {...pageProps} />
   return (
     <>
-      <head>
+      <Head>
         <script dangerouslySetInnerHTML={getAnalyticsTag()}/>
-      </head>
+      </Head>
       <Component {...pageProps} />
     </>
   )
