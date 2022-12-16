@@ -2,6 +2,7 @@
 import * as React from 'react'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
+import { Router } from 'next/router';
 
 import * as Fathom from 'fathom-client'
 // used for rendering equations (optional)
@@ -31,6 +32,12 @@ import {
 if (!isServer) {
   bootstrap()
 }
+
+Router.events.on('routeChangeComplete', (url) => {
+  try{
+    window._hmt.push(['_trackPageview', url]);
+  }catch (e){}
+})
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
