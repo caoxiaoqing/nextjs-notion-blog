@@ -32,10 +32,13 @@ import {
 if (!isServer) {
   bootstrap()
 }
+
 Router.events.on('routeChangeComplete', (url) => {
   try{
     window._hmt.push(['_trackPageview', url])
-  }catch(e){}
+  }catch(e){
+    // continue regardless of error
+  }
 })
 
 export default function App({ Component, pageProps }: AppProps) {
